@@ -28,6 +28,23 @@ namespace Numbers_2
 
             richTextBox1.AppendText(i1 + "\n" + i2 + "\n" + i3 + "\n"+ i4 + "\n" + i5 + "\n" + i6 + "\n");
             richTextBox1.AppendText(d1 + "\n" + d2 + "\n" + d3 + "\n");
+            
+
+            richTextBox1.AppendText(Math.Pow(27, 1.0 / 3.0)+"\n");
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                double d = Convert.ToDouble(textBox1.Text);
+                double cuberoot = Math.Pow(d, 1.0 / 3.0);
+                label1.Text = cuberoot.ToString();
+            }
+            catch
+            {
+                label1.Text = "Error unable to calculate.";
+            }   
         }
     }
 }
