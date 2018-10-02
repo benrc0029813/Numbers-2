@@ -46,5 +46,20 @@ namespace Numbers_2
                 label1.Text = "Error unable to calculate.";
             }   
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                double D2 = Convert.ToDouble(textBox2.Text);
+                double D3 = Convert.ToDouble(textBox3.Text);
+                double cuberoot = Math.Pow(D2, 1.0/D3);
+                label2.Text = cuberoot.ToString();
+            }
+            catch
+            {
+                label2.Text = "Error unable to calculate.";
+            }
+        }
     }
 }
